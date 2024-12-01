@@ -1,0 +1,76 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@gnome/debug@^0.0.0": "0.0.0",
+    "jsr:@gnome/errors@^0.0.0": "0.0.0",
+    "jsr:@gnome/fmt@^0.0.0": "0.0.0",
+    "jsr:@gnome/process@^0.0.0": "0.0.0",
+    "jsr:@gnome/runtime-info@0.1": "0.1.0",
+    "jsr:@std/assert@0.226": "0.226.0",
+    "jsr:@std/path@~0.225.2": "0.225.2",
+    "npm:@types/node@*": "22.5.4",
+    "npm:fs-ext@2.0.0": "2.0.0"
+  },
+  "jsr": {
+    "@gnome/debug@0.0.0": {
+      "integrity": "ae8d365c05b2d1c9f69abbe501d31628d4b3172043c00179a0bc9af4f49cafe7",
+      "dependencies": [
+        "jsr:@gnome/fmt"
+      ]
+    },
+    "@gnome/errors@0.0.0": {
+      "integrity": "d288a695ea6f368082435382245d69366a26ebae707a78fc573eb6996c55185e"
+    },
+    "@gnome/fmt@0.0.0": {
+      "integrity": "e8b05f23945c09919a92156453b5007a28b4b3ad0982dd862179d4fd1450c740",
+      "dependencies": [
+        "jsr:@gnome/process"
+      ]
+    },
+    "@gnome/fs@0.3.0": {
+      "integrity": "e80831ad42ff467d2727b71f601ae1d10b0f6f8b077e7c656c640d87296c2572",
+      "dependencies": [
+        "jsr:@gnome/debug",
+        "jsr:@gnome/errors",
+        "jsr:@gnome/runtime-info",
+        "jsr:@std/path",
+        "npm:fs-ext"
+      ]
+    },
+    "@gnome/process@0.0.0": {
+      "integrity": "25e061bae420a60ded858982f2e568f8d5c9298514bd9bccb0a58aa41e0dbf8b"
+    },
+    "@gnome/runtime-info@0.1.0": {
+      "integrity": "d27fcbde87a9ac1769f3a3b79d27d970e8788f8d0cbb5fdc99bd81826060c987"
+    },
+    "@std/assert@0.226.0": {
+      "integrity": "0dfb5f7c7723c18cec118e080fec76ce15b4c31154b15ad2bd74822603ef75b3"
+    },
+    "@std/path@0.225.2": {
+      "integrity": "0f2db41d36b50ef048dcb0399aac720a5348638dd3cb5bf80685bf2a745aa506",
+      "dependencies": [
+        "jsr:@std/assert"
+      ]
+    }
+  },
+  "npm": {
+    "@types/node@22.5.4": {
+      "integrity": "sha512-FDuKUJQm/ju9fT/SeX/6+gBzoPzlVCzfzmGkwKvRHQVxi4BntVbyIwf6a4Xn62mrvndLiml6z/UBXIdEVjQLXg==",
+      "dependencies": [
+        "undici-types"
+      ]
+    },
+    "fs-ext@2.0.0": {
+      "integrity": "sha512-aK8NlpSO5LUdSoWeshpnkgtptbua1rGo58Wc+mHQ2+JnoBlubMTsnV56Swl4bA0msrgAhG8TDu1aGS8deJwzBQ==",
+      "dependencies": [
+        "nan"
+      ]
+    },
+    "nan@2.22.0": {
+      "integrity": "sha512-nbajikzWTMwsW+eSsNm3QwlOs7het9gGJU5dDZzRTQGk03vyBOauxgI4VakDzE0PtsGTmXPsXTbbjVhRwR5mpw=="
+    },
+    "undici-types@6.19.8": {
+      "integrity": "sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw=="
+    }
+  }
+}
