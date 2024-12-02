@@ -71,11 +71,11 @@ function calculatePart1(data: Day1Data): number {
 function calculatePart2(data: Day1Data): number {
     let total = 0;
 
-    for (const number of data.listOne) {
-        const index = binarySearch(data.listTwo, number);
-        if (index < 0) continue;
+    for (const number of data.listOne) { // iterate over the first list
+        const index = binarySearch(data.listTwo, number); // find the number in the second list
+        if (index < 0) continue; // if the number is not found, skip it
 
-        total += countOccurrences(data.listTwo, index) * number;
+        total += countOccurrences(data.listTwo, index) * number; // add the number multiplied by the number of occurrences
     }
 
     return total;
@@ -92,11 +92,11 @@ function countOccurrences(list: number[], index: number): number {
     const value = list[index];
     let count = 1;
 
-    for (let i = index - 1; i >= 0 && list[i] === value; i--) {
+    for (let i = index - 1; i >= 0 && list[i] === value; i--) { // count occurrences to the left
         count++;
     }
 
-    for (let i = index + 1; i < list.length && list[i] === value; i++) {
+    for (let i = index + 1; i < list.length && list[i] === value; i++) { // count occurrences to the right
         count++;
     }
 
@@ -111,15 +111,15 @@ function countOccurrences(list: number[], index: number): number {
  */
 function binarySearch(list: number[], target: number): number {
     let left = 0;
-    let right = list.length - 1;
+    let right = list.length - 1; // set the right pointer to the last index
 
-    while (left <= right) {
+    while (left <= right) { 
         const midIndex = Math.floor(left + (right - left) / 2);
         const midValue = list[midIndex];
 
-        if (midValue === target) return midIndex;
-        if (midValue > target) right = midIndex - 1;
-        else left = midIndex + 1;
+        if (midValue === target) return midIndex;   // if the target is found, return the index
+        if (midValue > target) right = midIndex - 1; // if the target is less than the middle value, search the left half
+        else left = midIndex + 1; // if the target is greater than the middle value, search the right half
     }
 
     return -1;
