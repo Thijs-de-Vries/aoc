@@ -1,5 +1,7 @@
 import { parseInput } from '../lib/input_parser.ts';
 
+
+// only run the main function if this script is executed directly, not if it is imported as a module
 if (import.meta.main) {
     main();
 }
