@@ -1,4 +1,7 @@
 {
+  "remote": {
+    "url": "https://deno.land/x/"
+  },
   "version": "4",
   "specifiers": {
     "jsr:@gnome/debug@^0.0.0": "0.0.0",
