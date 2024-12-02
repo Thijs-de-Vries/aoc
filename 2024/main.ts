@@ -21,6 +21,41 @@
  * rules: 
  * using the google typescript style guide https://google.github.io/styleguide/tsguide.html
 */
+// header
+console.log(`
+                                                                                                              
+  __  __                  ____   _____                                             
+ |  \\/  |           /\\   / __ \\ / ____|                                            
+ | \\  / |_   _     /  \\ | |  | | |       _ __  _ __ ___   __ _ _ __ __ _ _ __ ___  
+ | |\\/| | | | |   / /\\ \\| |  | | |      | '_ \\| '__/ _ \\ / _\` | '__/ _\` | '_ \` _ \\ 
+ | |  | | |_| |  / ____ \\ |__| | |____  | |_) | | | (_) | (_| | | | (_| | | | | | |
+ |_|  |_|\\__, | /_/    \\_\\____/ \\_____| | .__/|_|  \\___/ \\__, |_|  \\__,_|_| |_| |_|
+          __/ |                         | |               __/ |                    
+         |___/                          |_|              |___/    
+`);
 
-// import * as readLine from 'node:readline';
-// import process from "node:process";
+import { get_aoc_data } from "./src/lib/get_aoc_data.ts";
+import 'https://deno.land/x/dotenv@v3.0.0/load.ts';
+
+
+
+function AOCdatasequence() {
+    //TODO: get the day and year from the command line arguments
+    let day = 1;
+    let year = 2024;
+
+    const missingFields = [];
+    if (!day) missingFields.push('day');
+    if (!year) missingFields.push('year');
+    if (!Deno.env.get('AOC_SESSION_KEY')) missingFields.push('AOC_SESSION_KEY');
+    
+    if (missingFields.length > 0) {
+        console.error(`Please provide the following fields: ${missingFields.join(', ')}`);
+        Deno.exit(1);
+    } else {
+        get_aoc_data(day, year, Deno.env.get('AOC_SESSION_KEY') || '');
+    }
+}
+
+AOCdatasequence();
+

@@ -1,7 +1,4 @@
 {
-  "remote": {
-    "url": "https://deno.land/x/"
-  },
   "version": "4",
   "specifiers": {
     "jsr:@gnome/debug@^0.0.0": "0.0.0",
@@ -97,6 +94,12 @@
     "undici-types@6.19.8": {
       "integrity": "sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw=="
     }
+  },
+  "remote": {
+    "https://deno.land/x/dotenv@v3.0.0/load.ts": "4eba9b76084c302d714c34a4976bbd91d0015faf9f219d8c8f8e8da0adeccdd5",
+    "https://deno.land/x/dotenv@v3.0.0/mod.ts": "09ed3579a2bd559ec4602118963a791397c1f1c670c757ebc1f94a219492da3d",
+    "https://deno.land/x/dotenv@v3.0.0/util.ts": "693730877b13f8ead2b79b2aa31e2a0652862f7dc0c5f6d2f313f4d39c7b7670",
+    "url": "https://deno.land/x/"
   },
   "workspace": {
     "dependencies": [
