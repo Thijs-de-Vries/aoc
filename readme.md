@@ -4,7 +4,7 @@ This repository contains my solutions for the Advent of Code challenges. Each ye
 
 ## Structure
 
-- `2024/` - Solutions for Advent of Code 2023
+- `2024/` - Solutions for Advent of Code 2024
 
 
 ## About Advent of Code
