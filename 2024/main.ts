@@ -57,5 +57,8 @@ function AOCdatasequence() {
     }
 }
 
-AOCdatasequence();
+
+// check if all data to this day has been collected
+// if not, collect the data
+// if yes, solve the problem
 
